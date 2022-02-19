@@ -7,7 +7,7 @@ class User:
     def __init__ (self, username,password):
 
         '''
-        __init__ method to define properties for our methods.
+        __init__ method to define properties for our user.
 
         Args:
             username:new_user username.
