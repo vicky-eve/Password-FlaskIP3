@@ -80,12 +80,16 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
-    def delete_credentials(self):
-        '''
-        delete_credentials method deletes a saved credential from the credentials_list
-        '''
+    def test_delete_credentials(self):
+            '''
+            test_delete_credentials to test if we can remove a credential from our credential list
+            '''
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("twitter","james","eve") # new credential
+            test_credentials.save_credentials()
 
-        Credentials.credentials_list.remove(self)
+            self.new_credentials.delete_credentials()# Deleting a credentials object
+            self.assertEqual(len(Credentials.credentials_list),1)
 
 
 

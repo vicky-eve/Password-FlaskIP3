@@ -21,4 +21,18 @@ class Credentials:
         '''
         Credentials.credentials_list.append(self)
 
+    @classmethod
+    def display_credentials(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.credentials_list
+
+    def delete_credentials(self):
+        '''
+        delete_credentials method deletes a saved credential from the credentials_list
+        '''
+
+        Credentials.credentials_list.remove(self)
+
        
