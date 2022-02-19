@@ -80,6 +80,14 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
+    def delete_credentials(self):
+        '''
+        delete_credentials method deletes a saved credential from the credentials_list
+        '''
+
+        Credentials.credentials_list.remove(self)
+
+
 
 if __name__ ==  '__main__':
     unittest.main()
