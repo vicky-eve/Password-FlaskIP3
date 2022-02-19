@@ -22,7 +22,7 @@ class Credentials:
         Credentials.credentials_list.append(self)
 
     @classmethod
-    def display_credentials(cls):
+    def display_all_credentials(cls):
         '''
         method that returns the contact list
         '''
