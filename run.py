@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from user import User #importing the user class
 from credentials import Credentials #importing credentials class
+import random
+import string
 
 #user methods
 def create_user(username, password):
@@ -77,3 +79,42 @@ def main():
                 print('\n')
 
                 pass
+                
+                while True:
+                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, lc - locate saved credential \n, del - delete credentials \n, ex - exit the account")
+
+                    short_code = input()
+
+                    if short_code == 'cc':
+                        print(" Create New Credentials")
+                        print("-"*40)
+
+                        print(" Input name of app: ")
+                        appname = input()
+
+                        print(" Input your username: ")
+                        username = input()
+
+                        print("Generate password?, respond by  YES or NO")
+                        password = input().upper()
+                        if password == 'YES':
+                            ## characters to generate password from
+                            characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+                            def generate_random_password():
+                                length = int(input("Enter password length: "))
+                                random.shuffle(characters)
+                                password = []
+                                for i in range(length):
+                                    password.append(random.choice(characters))
+                                random.shuffle(password)
+                                print("".join(password))
+
+                            ## invoking the function
+                            generate_random_password()
+
+                        elif password == 'NO':
+                             print ("Enter password:")
+                             password = input()
+                        else:
+                            print("Enter correct response")
+    
