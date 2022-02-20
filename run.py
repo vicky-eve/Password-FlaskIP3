@@ -81,7 +81,7 @@ def main():
                 pass
                 
                 while True:
-                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, lc - locate saved credential \n, del - delete credentials \n, ex - exit the account")
+                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, lc - locate saved credential \n, del - delete credentials")
 
                     short_code = input()
 
@@ -117,4 +117,22 @@ def main():
                              password = input()
                         else:
                             print("Enter correct response")
+
+                    elif short_code == 'sc':
+                        print("Save your credentials")
+                        print("-"*50)
+
+                        print(" Input app name: ")
+                        appname= input()
+
+                        print(" Input username: ")
+                        username = input()
+
+                        print("Input Password: ")
+                        password = input()
+
+                        save_credentials(create_credentials(appname, username, password))
+                        print('\n')
+                        print(f"{appname:} credentials successfully saved")
+                        print('\n')
     
