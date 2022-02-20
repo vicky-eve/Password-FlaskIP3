@@ -67,10 +67,10 @@ def main():
             print('\n')
 
         elif short_code == 'LG':
-            print("Enter your username")
+            print("Enter your username -")
             username = input()
 
-            print("Enter your password")
+            print("Enter your password -")
             password= input()
             if f"{username } = {password}":
                 print('*' * 10)
@@ -81,7 +81,7 @@ def main():
                 pass
                 
                 while True:
-                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, lc - locate saved credentials \n, del - delete credentials")
+                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, del - delete credentials \n, la - leave credentials")
 
                     short_code = input()
 
@@ -156,5 +156,16 @@ def main():
                         if delete_credentials == {credentials.appname}:
                             delete_credentials(delete_credentials)
                             print("details removed")
+
+                    elif short_code == 'la':
+                        print("-"*50)
+
+                        print("Thank you ! Till next time!")
+                        print('\n')
+                        break 
+
+if __name__ == '__main__':
+    main()
+
 
     
