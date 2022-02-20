@@ -150,4 +150,11 @@ def main():
                             print("Your list is empty!")
                             print('\n')
 
+                    elif short_code == 'del':
+                        print("Enter the name of app you want to delete:")
+                        delete_credentials = input()
+                        if delete_credentials == {credentials.appname}:
+                            delete_credentials(delete_credentials)
+                            print("details removed")
+
     
