@@ -81,7 +81,7 @@ def main():
                 pass
                 
                 while True:
-                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, lc - locate saved credential \n, del - delete credentials")
+                    print("Use these short codes: \n cc - Create new credentials \n,sc - Save credentials \n,  dc - display credentials \n, lc - locate saved credentials \n, del - delete credentials")
 
                     short_code = input()
 
@@ -135,4 +135,19 @@ def main():
                         print('\n')
                         print(f"{appname:} credentials successfully saved")
                         print('\n')
+
+                    elif short_code == 'dc':
+                         if display_all_credentials():
+                            print("Below is alist of all your credentials")
+                            print('\n')
+
+                            for credentials in display_all_credentials():
+                                print(f"{credentials.appname} {credentials.username} {credentials.password}")
+                                print('\n')
+                         
+                         else:
+                            print('\n')
+                            print("Your list is empty!")
+                            print('\n')
+
     
